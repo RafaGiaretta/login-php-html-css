@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TELA DE LOGIN</title>
+</head>
+<style>
+body{
+    background-color: rgb(221, 217, 217);
+}
+.cont-form{
+    background-color: rgb(44, 169, 169);
+    margin-left: 35%;
+    margin-right: 30%;
+    margin-top: 20%;
+    border-radius: 5px ;
+
+}
+.form{
+    padding: 20px;
+    text-align: center;
+
+}
+.enviar{
+    align-self:  center;
+}
+
+</style>
+<body>
+<div class="container">
+    <div class="cont-form">
+        <form class="form" method="post" action="autenticador.php">
+            <h3>Usuário: <input type="char" name="id" id="id"></h3>
+            <h3>Senha: <input type="password" name="password" id="password"></h3>
+            <button class="enviar" type="submit" name="submit" id="submit">Fazer login</button>
+            <h5>Ainda não é Usuário? Clique <a href="cadastro-usuario.html">aqui</a>  e cadastre-se!</h5>
+        </form>   
+    </div>
+</div>
+    
+    
+</body>
+</html>

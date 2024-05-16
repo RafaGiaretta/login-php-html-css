@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TELA DE LOGIN</title>
+</head>
+<style>
+    body {
+        background-color: rgb(221, 217, 217);
+    }
+
+    .cont-form {
+        background-color: rgb(44, 169, 169);
+        margin-left: 35%;
+        margin-right: 30%;
+        margin-top: 10%;
+        border-radius: 5px;
+
+    }
+
+    .form {
+        padding: 20px;
+        text-align: center;
+
+    }
+
+    .enviar {
+        align-self: center;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="cont-form">
+            <form class="form" method="post" action="cadastrar-usuario.php">
+                <h4>Bem vindo ao Marcelinho, the floater</h4><br>
+                <h3>Digite seu nome: </h3>
+                <input type="text" name="name" id="name"><br>
+                <h3>Criar um nome de utilizador: </h3>
+                <input type="text" name="id" id="id"><br>
+                <h3>Criar uma palavra-passe: </h3>
+                <input type="password" maxlength="10" name="password" id="password" placeholder="Digite sua senha"><br><br>
+                <input type="password" maxlength="10" name="password-confirm" id="password-confirm" placeholder="Digite novamente" 
+                oninput="validaSenha(this)"
+                ><br><br>
+                <input type="hidden" value="1" name="nivel" id="nivel" >
+                <button class="enviar" type="submit" name="submit" id="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+<script>
+function validaSenha (input){ 
+    if (input.value != document.getElementById('password').value) {
+    input.setCustomValidity('Repita a senha corretamente');
+  } else {
+    input.setCustomValidity('');
+  }
+} 
+</script>
+</body>
+
+</html>
